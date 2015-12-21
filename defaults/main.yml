@@ -1,0 +1,10 @@
+# defaults file for tsocks
+---
+tsocks_install: []
+
+tsocks_local: []
+tsocks_path: []
+
+tsocks_server: 127.0.0.1
+tsocks_server_type: 5
+tsocks_server_port: 1080

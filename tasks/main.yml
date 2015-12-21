@@ -1,0 +1,26 @@
+# tasks file for tsocks
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  with_items: tsocks_dependencies
+  tags: [configuration, tsocks, tsocks-dependencies]
+
+- name: install additional
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: tsocks_install
+  tags: [configuration, tsocks, tsocks-install]
+
+- name: update configuration file - /etc/tsocks/tsocks.conf
+  template:
+    src: etc/tsocks.conf.j2
+    dest: /etc/tsocks.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: [configuration, tsocks, tsocks-configuration]
