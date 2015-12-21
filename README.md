@@ -1,6 +1,6 @@
 ## tsocks
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-tsocks.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-tsocks) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-tsocks-blue.svg)](https://galaxy.ansible.com/list#/roles/1417)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-tsocks.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-tsocks) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-tsocks-blue.svg)](https://galaxy.ansible.com/list#/roles/6621)
 
 Set up tsocks in Debian-like systems.
 
