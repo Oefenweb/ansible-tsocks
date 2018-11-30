@@ -2,11 +2,10 @@
 ---
 - name: install dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ tsocks_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ tsocks_dependencies }}"
   tags:
     - configuration
     - tsocks
@@ -14,9 +13,8 @@
 
 - name: install additional
   apt:
-    name: "{{ item }}"
+    name: "{{ tsocks_install }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ tsocks_install }}"
   tags:
     - configuration
     - tsocks
