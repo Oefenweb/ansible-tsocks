@@ -30,7 +30,7 @@ None
 ---
 - hosts: all
   roles:
-    - tsocks
+    - oefenweb.tsocks
   vars:
     tsocks_local:
       - 192.168.0.0/255.255.255.0
